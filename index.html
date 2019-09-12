@@ -1,29 +1,48 @@
 <html lang="fr">
 
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Générateur de citation</title>
-        <link rel="stylesheet" type="text/css" href="styles.css">
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,900|Ubuntu:300,400" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="styles.css?v=5">
+        <link rel="icon" href="favicon.ico">
     </head>
 
     <body>
         <h1>
-            Projet 5 - Générateur de citation
+            Générateur de citations
         </h1>
 
         <div id="content" class="div">
-
+            Choisissez une génération de citation en deux ou trois parties puis le nombre que vous désirez.
+            <br> Puis cliquez sur le bouton ! C'est tout simple !
         </div>
 
         <p>
-            <button type="btn" id="generate">
-                Générer une citation aléatoire
+            <label for="type">Type de générateur : </label>
+            <select name="type" id="type">
+                <option value="twoparts">Deux parties</option>
+                <option value="threeparts">Trois parties</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="choix">Nombre de citations (1 à 5) : </label>
+            <input type="number" id="nb" name="nb" min="1" max="5" value="1">
+        </p>
+
+
+
+        <p>
+            <button type="button" id="generate">
+                <span>Générer citation(s)</span>
             </button>
         </p>
 
-        <script type="text/javascript" src="quote.js"></script>
+        <script type="text/javascript" src="javascript.js?=v1"></script>
 
     </body>
 
